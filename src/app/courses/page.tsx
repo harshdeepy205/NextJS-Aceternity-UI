@@ -23,16 +23,15 @@ function page() {
 	const filterCourses = (value:string)=>{
 		let courses = courseData.courses.filter((course:courseDataType)=>course.title.toLowerCase().includes(value.toLowerCase()))
     	setCourse(courses)
-    	console.log(value)
 	}
 
   return (
 		<div className="min-h-screen bg-black py-12 pt-36">
-			<div className="flex justify-between mx-16">
+			<div className="flex justify-center sm:justify-between mx-4 sm:mx-16 flex-wrap text-center">
 				<h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-8 text-white">
 					All courses ({courseData.courses.length})
 				</h1>
-				<div className="mr-24">
+				<div className="sm:mr-24">
 					<input
 						type="text"
 						placeholder="Search"
